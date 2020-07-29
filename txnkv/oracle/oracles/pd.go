@@ -18,11 +18,11 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/journeymidnight/client-go/config"
+	"github.com/journeymidnight/client-go/metrics"
+	"github.com/journeymidnight/client-go/txnkv/oracle"
 	pd "github.com/pingcap/pd/client"
 	log "github.com/sirupsen/logrus"
-	"github.com/tikv/client-go/config"
-	"github.com/tikv/client-go/metrics"
-	"github.com/tikv/client-go/txnkv/oracle"
 )
 
 var _ oracle.Oracle = &pdOracle{}

@@ -16,8 +16,8 @@ package kv
 import (
 	"context"
 
-	"github.com/tikv/client-go/config"
-	"github.com/tikv/client-go/key"
+	"github.com/journeymidnight/client-go/config"
+	"github.com/journeymidnight/client-go/key"
 )
 
 // BufferStore wraps a Retriever for read and a MemBuffer for buffered write.
@@ -35,9 +35,9 @@ type BufferStore struct {
 // NewBufferStore creates a BufferStore using r for read.
 func NewBufferStore(r Retriever, conf *config.Txn) *BufferStore {
 	return &BufferStore{
-		r:         r,
+		r: r,
 		MemBuffer: &lazyMemBuffer{
-			mb: NewMemDbBuffer(conf, 0),
+			mb:   NewMemDbBuffer(conf, 0),
 			conf: conf,
 		},
 	}

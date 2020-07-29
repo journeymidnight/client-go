@@ -16,8 +16,8 @@ package kv
 import (
 	"context"
 
+	"github.com/journeymidnight/client-go/key"
 	log "github.com/sirupsen/logrus"
-	"github.com/tikv/client-go/key"
 )
 
 // UnionIter is the iterator on an UnionStore.

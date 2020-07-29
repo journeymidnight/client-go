@@ -21,9 +21,9 @@ import (
 	"sort"
 
 	"github.com/google/btree"
+	"github.com/journeymidnight/client-go/codec"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
 	"github.com/pkg/errors"
-	"github.com/tikv/client-go/codec"
 )
 
 type mvccValueType int

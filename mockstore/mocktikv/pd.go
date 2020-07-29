@@ -18,9 +18,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pkg/errors"
 	"github.com/pingcap/kvproto/pkg/metapb"
 	"github.com/pingcap/pd/client"
+	"github.com/pkg/errors"
 )
 
 // Use global variables to prevent pdClients from creating duplicate timestamps.

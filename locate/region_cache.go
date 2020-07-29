@@ -21,15 +21,15 @@ import (
 	"time"
 
 	"github.com/google/btree"
+	"github.com/journeymidnight/client-go/codec"
+	"github.com/journeymidnight/client-go/config"
+	"github.com/journeymidnight/client-go/metrics"
+	"github.com/journeymidnight/client-go/retry"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
 	"github.com/pingcap/kvproto/pkg/metapb"
 	"github.com/pingcap/pd/client"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"github.com/tikv/client-go/codec"
-	"github.com/tikv/client-go/config"
-	"github.com/tikv/client-go/metrics"
-	"github.com/tikv/client-go/retry"
 )
 
 // CachedRegion encapsulates {Region, TTL}

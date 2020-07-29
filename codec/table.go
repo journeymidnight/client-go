@@ -13,7 +13,7 @@
 
 package codec
 
-import "github.com/tikv/client-go/key"
+import "github.com/journeymidnight/client-go/key"
 
 var (
 	tablePrefix     = []byte{'t'}
