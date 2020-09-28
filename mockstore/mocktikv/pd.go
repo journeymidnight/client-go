@@ -15,12 +15,13 @@ package mocktikv
 
 import (
 	"context"
+	"github.com/pingcap/kvproto/pkg/pdpb"
 	"sync"
 	"time"
 
 	"github.com/pkg/errors"
 	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/pingcap/pd/client"
+	"github.com/pingcap/pd/v4/client"
 )
 
 // Use global variables to prevent pdClients from creating duplicate timestamps.
@@ -40,6 +41,26 @@ func NewPDClient(cluster *Cluster) pd.Client {
 	return &pdClient{
 		cluster: cluster,
 	}
+}
+
+func (c *pdClient) ScatterRegion(ctx context.Context, regionID uint64) error {
+	return nil
+}
+
+func (c *pdClient) ConfigClient() pd.ConfigClient {
+	return nil
+}
+
+func (c *pdClient) GetLeaderAddr() string {
+	return ""
+}
+
+func (c *pdClient) ScanRegions(ctx context.Context, key, endKey []byte, limit int) ([]*metapb.Region, []*metapb.Peer, error) {
+	return nil, nil, nil
+}
+
+func (c *pdClient) GetOperator(ctx context.Context, regionID uint64) (*pdpb.GetOperatorResponse, error) {
+	return nil, nil
 }
 
 func (c *pdClient) GetClusterID(ctx context.Context) uint64 {
