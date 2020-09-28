@@ -28,7 +28,7 @@ import (
 	"github.com/journeymidnight/client-go/txnkv/latch"
 	"github.com/journeymidnight/client-go/txnkv/oracle"
 	"github.com/journeymidnight/client-go/txnkv/oracle/oracles"
-	pd "github.com/pingcap/pd/client"
+	pd "github.com/pingcap/pd/v4/client"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 )

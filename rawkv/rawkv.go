@@ -24,7 +24,7 @@ import (
 	"github.com/journeymidnight/client-go/retry"
 	"github.com/journeymidnight/client-go/rpc"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
-	pd "github.com/pingcap/pd/client"
+	pd "github.com/pingcap/pd/v4/client"
 	"github.com/pkg/errors"
 )
 

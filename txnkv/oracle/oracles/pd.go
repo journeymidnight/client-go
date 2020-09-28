@@ -21,7 +21,7 @@ import (
 	"github.com/journeymidnight/client-go/config"
 	"github.com/journeymidnight/client-go/metrics"
 	"github.com/journeymidnight/client-go/txnkv/oracle"
-	pd "github.com/pingcap/pd/client"
+	pd "github.com/pingcap/pd/v4/client"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -31,7 +31,6 @@ require (
 	github.com/pingcap/gofail v0.0.0-20181217135706-6a951c1e42c3 // indirect
 	github.com/pingcap/goleveldb v0.0.0-20171020122428-b9ff6c35079e
 	github.com/pingcap/kvproto v0.0.0-20200221034943-a2aa1d1e20a8
-	github.com/pingcap/pd v2.1.19+incompatible
 	github.com/pingcap/pd/v4 v4.0.0-beta.1.0.20200305072537-61d9f9cc35d3
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.0.0
