@@ -19,14 +19,14 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/journeymidnight/client-go/config"
+	"github.com/journeymidnight/client-go/key"
 	"github.com/pingcap/goleveldb/leveldb"
 	"github.com/pingcap/goleveldb/leveldb/comparer"
 	"github.com/pingcap/goleveldb/leveldb/iterator"
 	"github.com/pingcap/goleveldb/leveldb/memdb"
 	"github.com/pingcap/goleveldb/leveldb/util"
 	"github.com/pkg/errors"
-	"github.com/tikv/client-go/config"
-	"github.com/tikv/client-go/key"
 )
 
 // memDbBuffer implements the MemBuffer interface.

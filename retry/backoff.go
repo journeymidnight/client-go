@@ -20,9 +20,9 @@ import (
 	"math/rand"
 	"time"
 
+	"github.com/journeymidnight/client-go/metrics"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"github.com/tikv/client-go/metrics"
 )
 
 const (

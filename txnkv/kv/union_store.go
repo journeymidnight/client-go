@@ -16,8 +16,8 @@ package kv
 import (
 	"context"
 
-	"github.com/tikv/client-go/config"
-	"github.com/tikv/client-go/key"
+	"github.com/journeymidnight/client-go/config"
+	"github.com/journeymidnight/client-go/key"
 )
 
 // UnionStore is a store that wraps a snapshot for read and a BufferStore for buffered write.

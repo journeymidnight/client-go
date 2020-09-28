@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/journeymidnight/client-go/config"
+	"github.com/journeymidnight/client-go/key"
 	. "github.com/pingcap/check"
-	"github.com/tikv/client-go/config"
-	"github.com/tikv/client-go/key"
 )
 
 func TestT(t *testing.T) {

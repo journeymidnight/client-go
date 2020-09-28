@@ -16,9 +16,9 @@ package kv
 import (
 	"context"
 
+	"github.com/journeymidnight/client-go/config"
 	. "github.com/pingcap/check"
 	"github.com/pkg/errors"
-	"github.com/tikv/client-go/config"
 )
 
 var _ = Suite(&testUnionStoreSuite{})

@@ -20,9 +20,9 @@ import (
 	"sync"
 
 	"github.com/golang/protobuf/proto"
+	"github.com/journeymidnight/client-go/codec"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
 	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/tikv/client-go/codec"
 )
 
 // Cluster simulates a TiKV cluster. It focuses on management and the change of

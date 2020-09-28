@@ -18,10 +18,11 @@ import (
 	"github.com/pingcap/kvproto/pkg/pdpb"
 	"sync"
 	"time"
-
-	"github.com/pkg/errors"
 	"github.com/pingcap/kvproto/pkg/metapb"
 	"github.com/pingcap/pd/v4/client"
+
+	"github.com/pkg/errors"
+
 )
 
 // Use global variables to prevent pdClients from creating duplicate timestamps.

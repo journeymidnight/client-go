@@ -19,8 +19,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/journeymidnight/client-go/config"
 	. "github.com/pingcap/check"
-	"github.com/tikv/client-go/config"
 )
 
 var _ = Suite(&testSchedulerSuite{})

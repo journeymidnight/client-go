@@ -17,10 +17,10 @@ import (
 	"bytes"
 	"context"
 
+	"github.com/journeymidnight/client-go/retry"
+	"github.com/journeymidnight/client-go/rpc"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
 	"github.com/pkg/errors"
-	"github.com/tikv/client-go/retry"
-	"github.com/tikv/client-go/rpc"
 )
 
 // DeleteRangeTask is used to delete all keys in a range. After

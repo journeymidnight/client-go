@@ -20,11 +20,11 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
+	"github.com/journeymidnight/client-go/rpc"
 	"github.com/pingcap/kvproto/pkg/errorpb"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
 	"github.com/pingcap/kvproto/pkg/metapb"
 	"github.com/pkg/errors"
-	"github.com/tikv/client-go/rpc"
 )
 
 // For gofail injection.

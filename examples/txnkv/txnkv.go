@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tikv/client-go/config"
-	"github.com/tikv/client-go/key"
-	"github.com/tikv/client-go/txnkv"
+	"github.com/journeymidnight/client-go/config"
+	"github.com/journeymidnight/client-go/key"
+	"github.com/journeymidnight/client-go/txnkv"
 )
 
 // KV represents a Key-Value pair.
