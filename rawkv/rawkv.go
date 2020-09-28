@@ -18,14 +18,14 @@ import (
 	"context"
 	"time"
 
+	"github.com/journeymidnight/client-go/config"
+	"github.com/journeymidnight/client-go/locate"
+	"github.com/journeymidnight/client-go/metrics"
+	"github.com/journeymidnight/client-go/retry"
+	"github.com/journeymidnight/client-go/rpc"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
 	pd "github.com/pingcap/pd/client"
 	"github.com/pkg/errors"
-	"github.com/tikv/client-go/config"
-	"github.com/tikv/client-go/locate"
-	"github.com/tikv/client-go/metrics"
-	"github.com/tikv/client-go/retry"
-	"github.com/tikv/client-go/rpc"
 )
 
 var (

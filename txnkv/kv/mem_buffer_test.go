@@ -21,8 +21,8 @@ import (
 	"math/rand"
 	"testing"
 
+	"github.com/journeymidnight/client-go/config"
 	. "github.com/pingcap/check"
-	"github.com/tikv/client-go/config"
 )
 
 const (

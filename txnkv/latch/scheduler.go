@@ -17,8 +17,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tikv/client-go/config"
-	"github.com/tikv/client-go/txnkv/oracle"
+	"github.com/journeymidnight/client-go/config"
+	"github.com/journeymidnight/client-go/txnkv/oracle"
 )
 
 // LatchesScheduler is used to schedule latches for transactions.

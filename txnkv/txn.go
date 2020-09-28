@@ -18,13 +18,13 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/journeymidnight/client-go/key"
+	"github.com/journeymidnight/client-go/metrics"
+	"github.com/journeymidnight/client-go/txnkv/kv"
+	"github.com/journeymidnight/client-go/txnkv/store"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
 	"github.com/pkg/errors"
 	"github.com/prometheus/common/log"
-	"github.com/tikv/client-go/key"
-	"github.com/tikv/client-go/metrics"
-	"github.com/tikv/client-go/txnkv/kv"
-	"github.com/tikv/client-go/txnkv/store"
 )
 
 // Transaction is a key-value transaction.

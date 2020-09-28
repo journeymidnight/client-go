@@ -16,8 +16,8 @@ package store
 import (
 	"fmt"
 
+	"github.com/journeymidnight/client-go/key"
 	"github.com/pkg/errors"
-	"github.com/tikv/client-go/key"
 )
 
 // TxnRetryableMark is used to direct user to restart a transaction.

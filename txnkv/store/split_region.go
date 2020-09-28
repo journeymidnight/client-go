@@ -17,12 +17,12 @@ import (
 	"bytes"
 	"context"
 
+	"github.com/journeymidnight/client-go/key"
+	"github.com/journeymidnight/client-go/retry"
+	"github.com/journeymidnight/client-go/rpc"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"github.com/tikv/client-go/key"
-	"github.com/tikv/client-go/retry"
-	"github.com/tikv/client-go/rpc"
 )
 
 // SplitRegion splits the region contains splitKey into 2 regions: [start,
