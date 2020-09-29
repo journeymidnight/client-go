@@ -335,7 +335,8 @@ func (c *RegionCache) loadRegion(bo *retry.Backoffer, key []byte) (*Region, erro
 				return nil, err
 			}
 		}
-		meta, leader, err := c.pdClient.GetRegion(bo.GetContext(), key)
+		r, err := c.pdClient.GetRegion(bo.GetContext(), key)
+		meta, leader := r.Meta, r.Leader
 		metrics.RegionCacheCounter.WithLabelValues("get_region", metrics.RetLabel(err)).Inc()
 		if err != nil {
 			backoffErr = errors.Errorf("loadRegion from PD failed, key: %q, err: %v", key, err)
@@ -369,7 +370,8 @@ func (c *RegionCache) loadRegionByID(bo *retry.Backoffer, regionID uint64) (*Reg
 				return nil, err
 			}
 		}
-		meta, leader, err := c.pdClient.GetRegionByID(bo.GetContext(), regionID)
+		r, err := c.pdClient.GetRegionByID(bo.GetContext(), regionID)
+		meta, leader := r.Meta, r.Leader
 		metrics.RegionCacheCounter.WithLabelValues("get_region_by_id", metrics.RetLabel(err)).Inc()
 		if err != nil {
 			backoffErr = errors.Errorf("loadRegion from PD failed, regionID: %v, err: %v", regionID, err)

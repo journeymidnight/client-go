@@ -48,10 +48,6 @@ func (c *pdClient) ScatterRegion(ctx context.Context, regionID uint64) error {
 	return nil
 }
 
-func (c *pdClient) ConfigClient() pd.ConfigClient {
-	return nil
-}
-
 func (c *pdClient) GetLeaderAddr() string {
 	return ""
 }
@@ -95,19 +91,28 @@ func (m *mockTSFuture) Wait() (int64, int64, error) {
 	return m.pdc.GetTS(m.ctx)
 }
 
-func (c *pdClient) GetRegion(ctx context.Context, key []byte) (*metapb.Region, *metapb.Peer, error) {
+func (c *pdClient) GetRegion(ctx context.Context, key []byte) (*pd.Region, error) {
 	region, peer := c.cluster.GetRegionByKey(key)
-	return region, peer, nil
+	return &pd.Region{
+		Meta: region,
+		Leader: peer,
+	}, nil
 }
 
-func (c *pdClient) GetPrevRegion(ctx context.Context, key []byte) (*metapb.Region, *metapb.Peer, error) {
+func (c *pdClient) GetPrevRegion(ctx context.Context, key []byte) (*pd.Region, error) {
 	region, peer := c.cluster.GetPrevRegionByKey(key)
-	return region, peer, nil
+	return &pd.Region{
+		Meta: region,
+		Leader: peer,
+	}, nil
 }
 
-func (c *pdClient) GetRegionByID(ctx context.Context, regionID uint64) (*metapb.Region, *metapb.Peer, error) {
+func (c *pdClient) GetRegionByID(ctx context.Context, regionID uint64) (*pd.Region, error) {
 	region, peer := c.cluster.GetRegionByID(regionID)
-	return region, peer, nil
+	return &pd.Region{
+		Meta: region,
+		Leader: peer,
+	}, nil
 }
 
 func (c *pdClient) GetStore(ctx context.Context, storeID uint64) (*metapb.Store, error) {
@@ -125,6 +130,10 @@ func (c *pdClient) GetAllStores(ctx context.Context, opts ...pd.GetStoreOption) 
 }
 
 func (c *pdClient) UpdateGCSafePoint(ctx context.Context, safePoint uint64) (uint64, error) {
+	panic("unimplemented")
+}
+
+func (c *pdClient) UpdateServiceGCSafePoint(ctx context.Context, serviceID string, ttl int64, safePoint uint64) (uint64, error) {
 	panic("unimplemented")
 }
 
