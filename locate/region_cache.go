@@ -336,12 +336,12 @@ func (c *RegionCache) loadRegion(bo *retry.Backoffer, key []byte) (*Region, erro
 			}
 		}
 		r, err := c.pdClient.GetRegion(bo.GetContext(), key)
-		meta, leader := r.Meta, r.Leader
-		metrics.RegionCacheCounter.WithLabelValues("get_region", metrics.RetLabel(err)).Inc()
 		if err != nil {
 			backoffErr = errors.Errorf("loadRegion from PD failed, key: %q, err: %v", key, err)
 			continue
 		}
+		meta, leader := r.Meta, r.Leader
+		metrics.RegionCacheCounter.WithLabelValues("get_region", metrics.RetLabel(err)).Inc()
 		if meta == nil {
 			backoffErr = errors.Errorf("region not found for key %q", key)
 			continue
