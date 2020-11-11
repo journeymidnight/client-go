@@ -336,7 +336,7 @@ func (c *RegionCache) loadRegion(bo *retry.Backoffer, key []byte) (*Region, erro
 			}
 		}
 		r, err := c.pdClient.GetRegion(bo.GetContext(), key)
-		if err != nil {
+		if err != nil || r == nil {
 			backoffErr = errors.Errorf("loadRegion from PD failed, key: %q, err: %v", key, err)
 			continue
 		}
